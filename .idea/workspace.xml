@@ -43,7 +43,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -107,5 +107,39 @@
       <updated>1598396296355</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1634" height="340" key="GridCell.Tab.0.bottom" timestamp="1598397841916">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.0.bottom/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841916" />
+    <state width="1634" height="340" key="GridCell.Tab.0.center" timestamp="1598397841916">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.0.center/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841916" />
+    <state width="1634" height="340" key="GridCell.Tab.0.left" timestamp="1598397841915">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.0.left/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841915" />
+    <state width="1634" height="340" key="GridCell.Tab.0.right" timestamp="1598397841916">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.0.right/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841916" />
+    <state width="1634" height="340" key="GridCell.Tab.1.bottom" timestamp="1598397841917">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.1.bottom/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841917" />
+    <state width="1634" height="340" key="GridCell.Tab.1.center" timestamp="1598397841917">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.1.center/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841917" />
+    <state width="1634" height="340" key="GridCell.Tab.1.left" timestamp="1598397841917">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.1.left/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841917" />
+    <state width="1634" height="340" key="GridCell.Tab.1.right" timestamp="1598397841917">
+      <screen x="1680" y="23" width="1920" height="1013" />
+    </state>
+    <state width="1634" height="340" key="GridCell.Tab.1.right/1680.23.1920.1013/0.23.1680.1027@1680.23.1920.1013" timestamp="1598397841917" />
   </component>
 </project>
