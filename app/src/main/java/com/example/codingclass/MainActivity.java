@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String checkQuestion5 = CoreLogic.withoutString("Hello there llo", "llo");
+        String checkQuestion5 = CoreLogic.withoutString("Hello there", "llo");
         System.out.print(checkQuestion5);
     }
 }
