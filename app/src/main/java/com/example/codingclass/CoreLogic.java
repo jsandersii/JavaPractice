@@ -13,14 +13,14 @@ public class CoreLogic {
 
     public static String changeString (String str, int n) {
         try {
-            String results = "";
+            StringBuilder results = new StringBuilder();
             for (int i = 0; i <= str.length() -1; i++) {
                 if (i != n) {
-                    results += str.charAt(i);
+                    results.append(str.charAt(i));
                 }
             }
 
-            return results;
+            return results.toString();
         } catch (Exception e) {
             System.out.print("Something went wrong or someone lied" + e);
             return null;
@@ -142,21 +142,24 @@ public class CoreLogic {
         } else {
             int n = base.length();
             int r = remove.length();
-            String altString = "";
+            String convertedBaseStr = base.toLowerCase();
+            String convertedRemoveStr = remove.toLowerCase();
+            StringBuilder altString = new StringBuilder();
             boolean isPatternCheckComplete = false;
             boolean isPatternMatched = false;
 
             // Primary Loop Checking Base String
             for (int i = 0; i <= n - 1; i++) {
                 char baseChar = base.charAt(i);
+                char lowerBaseChar = convertedBaseStr.charAt(i);
 
                 // Secondary Loop Checking Remove String
                 for (int j = 0; j <= r - 1; j++) {
-                    char removeChar = remove.charAt(j);
+                    char lowerRemoveChar = convertedRemoveStr.charAt(j);
 
                     // Check for Remove String Pattern Match
                     if (!isPatternMatched) {
-                        if (baseChar != removeChar) {
+                        if (lowerBaseChar != lowerRemoveChar) {
                             isPatternCheckComplete = true;
                             break;
 
@@ -167,9 +170,9 @@ public class CoreLogic {
                     } else { // Pattern Match has Started
                         int k = i + 1;
                         if (k <= n - 1) {
-                            char nextChar = base.charAt(k);
+                            char nextChar = convertedBaseStr.charAt(k);
 
-                            if (nextChar != removeChar) {
+                            if (nextChar != lowerRemoveChar) {
                                 isPatternMatched = false;
                                 isPatternCheckComplete = true;
                                 break;
@@ -189,12 +192,12 @@ public class CoreLogic {
                 }
 
                 if (isPatternCheckComplete && !isPatternMatched){
-                    altString += baseChar;
+                    altString.append(baseChar);
                 }
                 isPatternMatched = false;
                 isPatternCheckComplete = false;
             }
-            return altString;
+            return altString.toString();
         }
     }
 
