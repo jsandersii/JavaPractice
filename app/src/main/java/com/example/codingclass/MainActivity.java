@@ -1,8 +1,8 @@
 package com.example.codingclass;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String checkQuestion5 = CoreLogic.withoutString("Hello there", "llo");
+        String checkQuestion5 = CoreLogic.withoutString("xxx", "xx");
         System.out.print(checkQuestion5);
     }
 }

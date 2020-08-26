@@ -184,6 +184,7 @@ public class CoreLogic {
                             }
 
                         } else {
+                            isPatternMatched = false;
                             isPatternCheckComplete = true;
                             break;
                         }
