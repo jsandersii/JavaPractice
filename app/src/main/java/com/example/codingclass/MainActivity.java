@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String checkQuestion5 = CoreLogic.withoutString("xxx", "xx");
-        System.out.print(checkQuestion5);
+        int checkQuestion = CoreLogic.getSumDigits(6723);
+        System.out.print(checkQuestion);
     }
 }

@@ -218,7 +218,42 @@ public class CoreLogic {
      */
 
     public static int getBunnyEars(int numOfBunnies) {
-        return 0;
+        int earCount = 0;
+        // Base condition
+        if (numOfBunnies == 0) {
+            return earCount;
+        } else if (numOfBunnies % 2 == 0) {
+            earCount += 3;
+        } else {
+            earCount += 2;
+        }
+        // Progressive Approach
+        return earCount + getBunnyEars(numOfBunnies - 1);
+    }
+
+    /*
+    Question #7
+    Given a non-negative int n, return the sum of its digits recursively (no loops).
+    Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+    sumDigits(126) → 9
+    sumDigits(49) → 13
+    sumDigits(12) → 3
+     */
+
+    public static int getSumDigits(int digit) {
+        int sumDigit = 0;
+
+        // base condition
+        if (digit < 10) {
+            return digit;
+        } else if (digit < 100) {
+            return sumDigit + (digit / 10) + (digit % 10);
+        } else {
+            // Progressive
+            sumDigit += digit % 10;
+            return sumDigit + getSumDigits((digit / 10));
+        }
+
     }
 
 }
