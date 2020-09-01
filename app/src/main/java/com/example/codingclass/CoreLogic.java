@@ -192,7 +192,7 @@ public class CoreLogic {
 
                 }
 
-                if (isPatternCheckComplete && !isPatternMatched){
+                if (isPatternCheckComplete && !isPatternMatched) {
                     altString.append(baseChar);
                 }
                 isPatternMatched = false;
@@ -201,6 +201,12 @@ public class CoreLogic {
             return altString.toString();
         }
     }
+
+    /***
+     *
+     * INTRO TO RECURSION
+     *
+     */
 
     /*
     Question #6
@@ -216,7 +222,6 @@ public class CoreLogic {
     bunnyEars2(1) → 2
     bunnyEars2(2) → 5
      */
-
     public static int getBunnyEars(int numOfBunnies) {
         int earCount = 0;
         // Base condition
@@ -253,6 +258,33 @@ public class CoreLogic {
             sumDigit += digit % 10;
             return sumDigit + getSumDigits((digit / 10));
         }
+
+    }
+
+    /*
+    Question #8
+    Given a string, compute recursively a new string where all the ‘x’ chars have been removed.
+    noX(“xaxb”) → “ab”
+    noX(“abc”) → “abc”
+    noX(“xx”) → “”
+     */
+
+    public static String dropTheNasty(String strNasty) {
+        String strClean = "";
+
+        // base condition
+        if (strNasty.length() < 1) {
+            return strClean;
+        } else {
+            String startChar = strNasty.substring(0, 1);
+            if (!startChar.equals("x")) {
+                strClean += startChar;
+
+            }
+        }
+
+        return strClean + dropTheNasty(strNasty.substring(1));
+
 
     }
 
