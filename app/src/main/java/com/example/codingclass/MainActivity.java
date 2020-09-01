@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -11,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        String checkQuestion = CoreLogic.dropTheNasty("aaxxbbxxccxabcx");
+        String[] arrSample = {"1", "z", "3", "z", "1", "5", "a"};
+        Map<String, Integer> checkQuestion = CoreLogic.sayWordCount(arrSample);
         System.out.print(checkQuestion);
     }
 }

@@ -1,5 +1,8 @@
 package com.example.codingclass;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CoreLogic {
 
     /*
@@ -286,6 +289,35 @@ public class CoreLogic {
         return strClean + dropTheNasty(strNasty.substring(1));
 
 
+    }
+
+    /*
+       Question #9
+       The classic word-count algorithm: given an array of strings, return a Map<String, Integer> with a key for each different string,
+       with the value the number of times that string appears in the array.
+        wordCount([“a”, “b”, “a”, “c”, “b”]) → {“a”: 2, “b”: 2, “c”: 1}
+        wordCount([“c”, “b”, “a”]) → {“a”: 1, “b”: 1, “c”: 1}
+        wordCount([“c”, “c”, “c”, “c”]) → {“c”: 4}
+     */
+
+    public static Map<String, Integer> sayWordCount(String[] arrString) {
+        Map<String, Integer> wordMap = new HashMap<>();
+        if (arrString.length > 1) {
+            for (String word : arrString) {
+                if (wordMap.size() > 0 && wordMap.containsKey(word)) {
+                    int wordCount = wordMap.get(word) + 1;
+                    wordMap.put(word, wordCount);
+                } else {
+                    int wordCount = 1;
+                    wordMap.put(word, wordCount);
+                }
+            }
+
+        } else {
+            return null;
+        }
+
+        return wordMap;
     }
 
 }
