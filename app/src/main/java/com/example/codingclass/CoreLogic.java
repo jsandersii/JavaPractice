@@ -302,7 +302,7 @@ public class CoreLogic {
 
     public static Map<String, Integer> sayWordCount(String[] arrString) {
         Map<String, Integer> wordMap = new HashMap<>();
-        if (arrString.length > 1) {
+        if (arrString.length >= 1) {
             for (String word : arrString) {
                 if (wordMap.size() > 0 && wordMap.containsKey(word)) {
                     int wordCount = wordMap.get(word) + 1;
